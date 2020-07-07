@@ -1,0 +1,2 @@
+D:\Unity 2019.2.13f1\One Triangle Color\One Triangle Color\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Unity 2019.2.13f1\One Triangle Color\One Triangle Color\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
