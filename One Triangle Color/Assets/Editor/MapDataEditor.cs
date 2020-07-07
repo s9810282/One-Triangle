@@ -50,9 +50,9 @@ public class MapDataEditor : Editor
 
         
 
-        if (GUILayout.Button("SAVE"))
+        if (GUILayout.Button("Save"))
         {
-            Debug.Log("SAVE");
+            Debug.Log("Save");
             mapData.Save();
         }
 
@@ -61,6 +61,24 @@ public class MapDataEditor : Editor
             Debug.Log("Load");
             mapData.Load();
         }
+
+        GUILayout.Space(10f);
+
+        if (GUILayout.Button("Save Map Data"))
+        {
+            SampleWindow s = new SampleWindow();
+            s.mapData = mapData;
+            s.OpenSaveWindow();
+        }
+
+        if (GUILayout.Button("Load Map Data"))
+        {
+            SampleWindow s = new SampleWindow();
+            s.mapData = mapData;
+            s.OpenLoadWindow();
+        }
+
+        GUILayout.Space(10f);
 
         if (GUILayout.Button("Clear Data"))
         {
@@ -73,6 +91,7 @@ public class MapDataEditor : Editor
             Debug.Log("Clear Map");
             mapData.ClearMap();
         }
+
 
     }
 }

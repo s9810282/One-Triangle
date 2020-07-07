@@ -62,13 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\03.Scripts\ColorTriangle.cs" />
-    <Compile Include="Assets\03.Scripts\MakeMapData.cs" />
+    <Compile Include="Assets\03.Scripts\Map Data\MakeMapData.cs" />
+    <Compile Include="Assets\03.Scripts\Map Data\StageMapData.cs" />
     <Compile Include="Assets\03.Scripts\ResourceManager.cs" />
-    <Compile Include="Assets\03.Scripts\StageMapData.cs" />
-    <Compile Include="Assets\03.Scripts\Triangle.cs" />
-    <Compile Include="Assets\03.Scripts\TriangleData.cs" />
-    <Compile Include="Assets\03.Scripts\TriangleType.cs" />
+    <Compile Include="Assets\03.Scripts\Triangle\ColorTriangle.cs" />
+    <Compile Include="Assets\03.Scripts\Triangle\Triangle.cs" />
+    <Compile Include="Assets\03.Scripts\Triangle\TriangleData.cs" />
+    <Compile Include="Assets\03.Scripts\Triangle\TriangleType.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity 2019.2.13f1/One Triangle/One Triangle Color/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
