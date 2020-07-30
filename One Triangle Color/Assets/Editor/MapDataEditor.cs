@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+using Map;
+
+
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-
-using Map;
 
 [CustomEditor(typeof(MakeMapData))]
 public class MapDataEditor : Editor
@@ -14,7 +18,6 @@ public class MapDataEditor : Editor
     MakeMapData mapData;
     SerializedProperty makeMapData;
 
-    // Start is called before the first frame update
     void OnEnable()
     {
         mapData = target as MakeMapData;
@@ -50,9 +53,7 @@ public class MapDataEditor : Editor
         serializedObject.Update();
         EditorGUILayout.PropertyField(makeMapData);
         serializedObject.ApplyModifiedProperties();
-
-        
-
+     
         if (GUILayout.Button("Save"))
         {
             Debug.Log("Save");
@@ -70,14 +71,14 @@ public class MapDataEditor : Editor
         if (GUILayout.Button("Save Map Data"))
         {
             SampleWindow s = new SampleWindow();
-            s.mapData = mapData;
+            s.makeMapData = mapData;
             s.OpenSaveWindow();
         }
 
         if (GUILayout.Button("Load Map Data"))
         {
             SampleWindow s = new SampleWindow();
-            s.mapData = mapData;
+            s.makeMapData = mapData;
             s.OpenLoadWindow();
         }
 
@@ -94,7 +95,5 @@ public class MapDataEditor : Editor
             Debug.Log("Clear Map");
             mapData.ClearMap();
         }
-
-
     }
 }

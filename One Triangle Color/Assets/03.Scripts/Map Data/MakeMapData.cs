@@ -9,17 +9,6 @@ namespace Map
     {
         public StageMapData mapData;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         public void Save()
         {
             Triangle[] triangles = FindObjectsOfType<Triangle>();
@@ -34,8 +23,6 @@ namespace Map
             }
 
         } 
-        //삼각형들만 받아와서 저장 
-        //삼각형을 제외한 스테이지의 구성요소들은 스테이지 씬에 배치되어잇을 예정
 
         public void Load()
         {
@@ -50,9 +37,6 @@ namespace Map
                 triangle.tag = item.tag;
                 triangle.transform.position = new Vector3(item.x, item.y, 0);
                 triangle.transform.rotation = new Quaternion(item.rotateX, 0, 0, 0);
-
-                //triangle.transform.position = item.position;
-                //triangle.transform.rotation = item.rotation;
             }
         }
 

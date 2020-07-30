@@ -1,51 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Triangles;
+using Map;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-using Triangles;
-using Map;
-
 public class SampleWindow : EditorWindow
 {
-    public MakeMapData mapData;
+    public MakeMapData makeMapData;
 
-    StageMapData[] mapDatas;
-
-    bool isSave;
-
-    [MenuItem("Tools/Save")]
-    static void Save()
-    {
-        
-    }
-
-    [MenuItem("Tools/Load")]
-    static void Load()
-    {
-
-    }
+    private StageMapData[] mapDatas;
+    private bool isSave;
 
     private void OnGUI()
     {
         mapDatas = Resources.LoadAll<StageMapData>("MapData");
 
-        var style = new GUIStyle(GUI.skin.button);
-
-        
-
         for (int i = 0; i < mapDatas.Length; i++)
-        {       
-            if (GUILayout.Button(mapDatas[i].name))
+        {
+            if (GUILayout.Button(mapDatas[i].name)) 
             {
-                mapData.mapData = mapDatas[i];
+                makeMapData.mapData = mapDatas[i];
 
                 if (isSave)
-                    mapData.Save();
+                    makeMapData.Save();
                 else
-                    mapData.Load();
+                    makeMapData.Load();
             }
         }
     }
@@ -67,4 +50,16 @@ public class SampleWindow : EditorWindow
         window.title = "Save Map Data List";
         window.Show();
     }
+
+    [MenuItem("Tools/Save")]
+    static void Save()
+    {
+
+    }
+    [MenuItem("Tools/Load")]
+    static void Load()
+    {
+
+    }
+
 }

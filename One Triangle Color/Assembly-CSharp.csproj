@@ -62,13 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\03.Scripts\Ingame\GameManager.cs" />
+    <Compile Include="Assets\03.Scripts\Ingame\test.cs" />
+    <Compile Include="Assets\03.Scripts\Ingame\Triangle\ColorTriangle.cs" />
+    <Compile Include="Assets\03.Scripts\Ingame\Triangle\Triangle.cs" />
+    <Compile Include="Assets\03.Scripts\Ingame\Triangle\TriangleData.cs" />
+    <Compile Include="Assets\03.Scripts\Ingame\Triangle\TriangleType.cs" />
+    <Compile Include="Assets\03.Scripts\Ingame\TriangleManager.cs" />
+    <Compile Include="Assets\03.Scripts\Loading\LoadingScene.cs" />
     <Compile Include="Assets\03.Scripts\Map Data\MakeMapData.cs" />
     <Compile Include="Assets\03.Scripts\Map Data\StageMapData.cs" />
     <Compile Include="Assets\03.Scripts\ResourceManager.cs" />
-    <Compile Include="Assets\03.Scripts\Triangle\ColorTriangle.cs" />
-    <Compile Include="Assets\03.Scripts\Triangle\Triangle.cs" />
-    <Compile Include="Assets\03.Scripts\Triangle\TriangleData.cs" />
-    <Compile Include="Assets\03.Scripts\Triangle\TriangleType.cs" />
+    <Compile Include="Assets\03.Scripts\Stage\StageSelect.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity 2019.2.13f1/One Triangle/One Triangle Color/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -23,6 +23,7 @@ public class ResourceManager
     }
 
     Dictionary<TriangleType, GameObject> tagToTriangles;
+    Dictionary<string, StageMapData> stageDatas;
 
     // Start is called before the first frame update
     public void Init()
@@ -37,5 +38,10 @@ public class ResourceManager
     public GameObject ReturnTriangle(TriangleType type)
     {
         return tagToTriangles[type];
+    }
+
+    public StageMapData ReturnMapData(string stageNum)
+    {
+        return stageDatas[stageNum];
     }
 }
